@@ -1,0 +1,38 @@
+pgsql:
+  host:
+  port:
+  user:
+  password:
+  name:
+  extra:
+    sslmode: disable
+    connRetry: 5
+    maxOpenConns: 2
+    maxIdleConns: 1
+    descriptionCacheCapacity:
+    statementCacheCapacity: 512
+    connTimeOut: 30
+    maxOpenConnTTL: 30
+    maxIdleConnTTL: 30
+    queryExecMode: cache_statement
+
+echo:
+  port:
+  requestTimeout: 30000
+
+rabbitMQ:
+  host:
+  port:
+  user:
+  password:
+
+redis:
+  host:
+  port:
+  password:
+  extra:
+    scheme:
+
+userService:
+  address:
+  requestTimeout: 30000

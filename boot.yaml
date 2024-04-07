@@ -1,0 +1,34 @@
+grpc:
+  - name: userService                 # Required
+    port: 9003                        # Required
+    gwPort: 9003                      # Optional, default: gateway port will be the same as grpc port if not provided
+    enabled: true                     # Required
+    enableReflection: true            # Optional, default: false
+    enableRkGwOption: true            # Optional, default: false
+    commonService:
+      enabled: true                   # Optional, default: false
+    docs:
+      enabled: true                   # Optional, default: false
+      specPaths:
+        - "target/grpc/user"
+    sw:
+      enabled: true                   # Optional, default: false
+      jsonPaths:
+        - "target/grpc/user"
+    prom:
+      enabled: true                   # Optional, default: false
+    pprof:
+      enabled: true
+    middleware:
+      #errorModel: amazon
+      logging:
+        enabled: true                 # Optional, default: false
+      prom:
+        enabled: true                 # Optional, default: false
+      meta:
+        enabled: true                 # Optional, default: false
+      cors:
+        allowOrigins:
+          - "http://localhost:*"
+      secure:
+        enabled: true                 # Optional, default: false
